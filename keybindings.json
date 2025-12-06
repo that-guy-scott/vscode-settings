@@ -1,0 +1,250 @@
+[
+    {
+        "key": "alt+1",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    // IntelliJ-style navigation
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.quickOpen",
+        "when": "!inDebugMode"
+    },
+    {
+        "key": "ctrl+shift+n",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+shift+e",
+        "command": "workbench.action.showAllEditorsByMostRecentlyUsed"
+    },
+    {
+        "key": "shift shift",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "workbench.action.navigateBack"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "workbench.action.navigateForward"
+    },
+
+    // IntelliJ-style code navigation
+    {
+        "key": "ctrl+b",
+        "command": "editor.action.revealDefinition",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "editor.action.goToImplementation",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+f7",
+        "command": "references-view.findReferences",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+f12",
+        "command": "workbench.action.gotoSymbol"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.replaceInFiles"
+    },
+
+    // IntelliJ-style refactoring
+    {
+        "key": "shift+f6",
+        "command": "editor.action.rename",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+shift+t",
+        "command": "editor.action.refactor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "editor.action.refactor",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+m",
+        "command": "editor.action.refactor",
+        "when": "editorTextFocus"
+    },
+
+    // IntelliJ-style editing
+    {
+        "key": "ctrl+d",
+        "command": "editor.action.duplicateSelection",
+        "when": "editorTextFocus && vim.mode == 'Insert'"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "editor.action.deleteLines",
+        "when": "editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "editor.action.smartSelect.expand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.closeActiveEditor"
+    },
+
+    // IntelliJ-style code generation
+    {
+        "key": "alt+insert",
+        "command": "editor.action.sourceAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorTextFocus && vim.mode == 'Insert'"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "editor.action.showHover",
+        "when": "editorTextFocus"
+    },
+
+    // IntelliJ-style search
+    {
+        "key": "ctrl+shift+f",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "ctrl+shift+r",
+        "command": "workbench.action.replaceInFiles"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "actions.find",
+        "when": "editorTextFocus && vim.mode == 'Insert'"
+    },
+
+    // IntelliJ-style run/debug
+    {
+        "key": "shift+f10",
+        "command": "workbench.action.debug.run"
+    },
+    {
+        "key": "shift+f9",
+        "command": "workbench.action.debug.start"
+    },
+    {
+        "key": "ctrl+f2",
+        "command": "workbench.action.debug.stop"
+    },
+    {
+        "key": "f8",
+        "command": "workbench.action.debug.continue"
+    },
+    {
+        "key": "f7",
+        "command": "workbench.action.debug.stepInto"
+    },
+
+    // IntelliJ-style window management
+    {
+        "key": "alt+home",
+        "command": "breadcrumbs.focusAndSelect"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+f12",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+
+    // IntelliJ-style VCS/Git
+    {
+        "key": "ctrl+k",
+        "command": "git.commitStaged",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "alt+9",
+        "command": "workbench.view.scm"
+    },
+
+    // IntelliJ-style tool windows (Alt+Number)
+    {
+        "key": "alt+2",
+        "command": "workbench.view.extension.bookmarks"
+    },
+    {
+        "key": "alt+3",
+        "command": "workbench.action.findInFiles"
+    },
+    {
+        "key": "alt+4",
+        "command": "workbench.action.debug.run"
+    },
+    {
+        "key": "alt+5",
+        "command": "workbench.view.debug"
+    },
+    {
+        "key": "alt+7",
+        "command": "outline.focus"
+    },
+    {
+        "key": "alt+f12",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+
+    // IntelliJ-style bookmarks
+    {
+        "key": "f11",
+        "command": "bookmarks.toggle",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+f11",
+        "command": "bookmarks.list"
+    },
+
+    // Additional useful mappings
+    {
+        "key": "ctrl+shift+a",
+        "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "editor.action.formatDocument",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+alt+o",
+        "command": "editor.action.organizeImports",
+        "when": "editorTextFocus"
+    }
+]
