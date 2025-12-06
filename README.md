@@ -6,6 +6,7 @@ Personal VS Code configuration with Vim keybindings and IntelliJ-style shortcuts
 
 - `settings.json` - Editor settings, Vim configuration, and leader key mappings
 - `keybindings.json` - Global keyboard shortcuts (IntelliJ-style)
+- `extensions.txt` - List of installed extensions
 
 ## Editor Settings
 
@@ -193,6 +194,8 @@ Personal VS Code configuration with Vim keybindings and IntelliJ-style shortcuts
 
 ## Installation
 
+### Settings & Keybindings
+
 Copy files to your VS Code user settings directory:
 
 **Linux:**
@@ -210,8 +213,16 @@ cp settings.json keybindings.json ~/Library/Application\ Support/Code/User/
 copy settings.json keybindings.json %APPDATA%\Code\User\
 ```
 
-## Required Extensions
+### Extensions
 
-- [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
-- [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks)
-- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+Install all extensions from the list:
+
+```bash
+cat extensions.txt | xargs -L 1 code --install-extension
+```
+
+To update the extensions list:
+
+```bash
+code --list-extensions > extensions.txt
+```
