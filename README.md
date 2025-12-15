@@ -115,7 +115,6 @@ Personal VS Code configuration with Vim keybindings and IntelliJ-style shortcuts
 ### Navigation
 | Key | Action |
 |-----|--------|
-| `Ctrl+N` | Quick Open |
 | `Ctrl+Shift+N` | Quick Open |
 | `Ctrl+E` | Quick Open |
 | `Ctrl+Shift+E` | Recent Editors |
@@ -186,6 +185,14 @@ Personal VS Code configuration with Vim keybindings and IntelliJ-style shortcuts
 |-----|--------|
 | `F11` | Toggle Bookmark |
 | `Shift+F11` | List Bookmarks |
+
+### Reserved for GitHub Copilot
+| Key | Action |
+|-----|--------|
+| `Ctrl+I` | Copilot Inline Chat |
+| `Ctrl+Shift+I` | Copilot Agent Mode |
+| `Ctrl+N` | Copilot New Chat |
+| `Ctrl+Alt+I` | Copilot Chat View |
 
 ### Git
 | Key | Action |

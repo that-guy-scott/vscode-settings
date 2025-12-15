@@ -1,4 +1,5 @@
 {
+    "keyboard.dispatch": "keyCode",
     "github.copilot.nextEditSuggestions.enabled": true,
     "workbench.startupEditor": "none",
     "claudeCode.preferredLocation": "sidebar",
@@ -598,7 +599,12 @@
     "editor.stickyScroll.enabled": false,
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "continue.enableTabAutocomplete": false,
-    "editor.codeActionsOnSave": {
-        
+    "editor.codeActionsOnSave": {},
+    // Dark theme settings
+    "workbench.colorCustomizations": {
+        "editor.background": "#000000",
+        "sideBar.background": "#000000",
+        "activityBar.background": "#000000",
+        "terminal.background": "#000000"
     }
 }

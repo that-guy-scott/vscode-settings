@@ -1,14 +1,39 @@
 [
+    // ESC to focus editor, Shift+ESC to hide all panes
+    {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorTextFocus && !vim.mode"
+    },
+    {
+        "key": "shift+escape",
+        "command": "workbench.action.closeSidebar"
+    },
+    {
+        "key": "shift+escape",
+        "command": "workbench.action.closeAuxiliaryBar"
+    },
+    {
+        "key": "shift+escape",
+        "command": "workbench.action.closePanel"
+    },
+    {
+        "key": "shift+escape",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    // File explorer toggle (vim-like navigation with j/k/h/l when focused)
     {
         "key": "alt+1",
-        "command": "workbench.action.toggleSidebarVisibility"
+        "command": "workbench.view.explorer",
+        "when": "!sideBarFocus"
+    },
+    {
+        "key": "alt+1",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "sideBarFocus"
     },
     // IntelliJ-style navigation
-    {
-        "key": "ctrl+n",
-        "command": "workbench.action.quickOpen",
-        "when": "!inDebugMode"
-    },
+    // Ctrl+N reserved for Copilot new chat session
     {
         "key": "ctrl+shift+n",
         "command": "workbench.action.quickOpen"
@@ -42,8 +67,7 @@
     },
     {
         "key": "ctrl+alt+b",
-        "command": "editor.action.goToImplementation",
-        "when": "editorTextFocus"
+        "command": "workbench.action.toggleAuxiliaryBar"
     },
     {
         "key": "alt+f7",
@@ -118,16 +142,8 @@
         "command": "editor.action.sourceAction",
         "when": "editorTextFocus"
     },
-    {
-        "key": "ctrl+i",
-        "command": "editor.action.triggerSuggest",
-        "when": "editorTextFocus && vim.mode == 'Insert'"
-    },
-    {
-        "key": "ctrl+shift+i",
-        "command": "editor.action.showHover",
-        "when": "editorTextFocus"
-    },
+    // Ctrl+I reserved for Copilot inline chat
+    // Ctrl+Shift+I reserved for Copilot agent mode
 
     // IntelliJ-style search
     {
@@ -173,11 +189,23 @@
     },
     {
         "key": "ctrl+tab",
-        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!inEditorsPicker"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker"
     },
     {
         "key": "ctrl+shift+tab",
-        "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
+        "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
+        "when": "!inEditorsPicker"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker"
     },
     {
         "key": "ctrl+shift+f12",
@@ -196,6 +224,10 @@
     },
 
     // IntelliJ-style tool windows (Alt+Number)
+    {
+        "key": "alt+0",
+        "command": "claude-vscode.sidebar.open"
+    },
     {
         "key": "alt+2",
         "command": "workbench.view.extension.bookmarks"
