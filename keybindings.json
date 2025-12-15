@@ -7,30 +7,26 @@
     },
     {
         "key": "shift+escape",
-        "command": "workbench.action.closeSidebar"
-    },
-    {
-        "key": "shift+escape",
-        "command": "workbench.action.closeAuxiliaryBar"
-    },
-    {
-        "key": "shift+escape",
-        "command": "workbench.action.closePanel"
-    },
-    {
-        "key": "shift+escape",
-        "command": "workbench.action.focusActiveEditorGroup"
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "workbench.action.closeSidebar",
+                "workbench.action.closeAuxiliaryBar",
+                "workbench.action.closePanel",
+                "workbench.action.focusActiveEditorGroup"
+            ]
+        }
     },
     // File explorer toggle (vim-like navigation with j/k/h/l when focused)
     {
         "key": "alt+1",
         "command": "workbench.view.explorer",
-        "when": "!sideBarFocus"
+        "when": "!sideBarVisible || activeViewlet != 'workbench.view.explorer'"
     },
     {
         "key": "alt+1",
-        "command": "workbench.action.focusActiveEditorGroup",
-        "when": "sideBarFocus"
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.explorer'"
     },
     // IntelliJ-style navigation
     // Ctrl+N reserved for Copilot new chat session
@@ -60,11 +56,7 @@
     },
 
     // IntelliJ-style code navigation
-    {
-        "key": "ctrl+b",
-        "command": "editor.action.revealDefinition",
-        "when": "editorTextFocus"
-    },
+    // Ctrl+B reserved for VS Code default (toggle sidebar)
     {
         "key": "ctrl+alt+b",
         "command": "workbench.action.toggleAuxiliaryBar"
@@ -226,7 +218,13 @@
     // IntelliJ-style tool windows (Alt+Number)
     {
         "key": "alt+0",
-        "command": "claude-vscode.sidebar.open"
+        "command": "claude-vscode.sidebar.open",
+        "when": "!sideBarVisible || activeViewlet != 'workbench.view.extension.claude-sidebar'"
+    },
+    {
+        "key": "alt+0",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarVisible && activeViewlet == 'workbench.view.extension.claude-sidebar'"
     },
     {
         "key": "alt+2",
