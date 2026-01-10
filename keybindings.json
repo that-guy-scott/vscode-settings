@@ -6,6 +6,11 @@
         "when": "!editorTextFocus && !vim.mode"
     },
     {
+        "key": "escape",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorTextFocus && vim.mode == 'Normal'"
+    },
+    {
         "key": "shift+escape",
         "command": "runCommands",
         "args": {
@@ -54,7 +59,6 @@
         "key": "ctrl+alt+right",
         "command": "workbench.action.navigateForward"
     },
-
     // IntelliJ-style code navigation
     // Ctrl+B reserved for VS Code default (toggle sidebar)
     {
@@ -74,7 +78,6 @@
         "key": "ctrl+h",
         "command": "workbench.action.replaceInFiles"
     },
-
     // IntelliJ-style refactoring
     {
         "key": "shift+f6",
@@ -96,7 +99,6 @@
         "command": "editor.action.refactor",
         "when": "editorTextFocus"
     },
-
     // IntelliJ-style editing
     {
         "key": "ctrl+d",
@@ -127,7 +129,6 @@
         "key": "ctrl+shift+w",
         "command": "workbench.action.closeActiveEditor"
     },
-
     // IntelliJ-style code generation
     {
         "key": "alt+insert",
@@ -136,7 +137,6 @@
     },
     // Ctrl+I reserved for Copilot inline chat
     // Ctrl+Shift+I reserved for Copilot agent mode
-
     // IntelliJ-style search
     {
         "key": "ctrl+shift+f",
@@ -151,7 +151,6 @@
         "command": "actions.find",
         "when": "editorTextFocus && vim.mode == 'Insert'"
     },
-
     // IntelliJ-style run/debug
     {
         "key": "shift+f10",
@@ -173,7 +172,6 @@
         "key": "f7",
         "command": "workbench.action.debug.stepInto"
     },
-
     // IntelliJ-style window management
     {
         "key": "alt+home",
@@ -203,7 +201,6 @@
         "key": "ctrl+shift+f12",
         "command": "workbench.action.toggleMaximizedPanel"
     },
-
     // IntelliJ-style VCS/Git
     {
         "key": "ctrl+k",
@@ -214,7 +211,6 @@
         "key": "alt+9",
         "command": "workbench.view.scm"
     },
-
     // IntelliJ-style tool windows (Alt+Number)
     {
         "key": "alt+0",
@@ -250,7 +246,6 @@
         "key": "alt+f12",
         "command": "workbench.action.terminal.toggleTerminal"
     },
-
     // IntelliJ-style bookmarks
     {
         "key": "f11",
@@ -261,7 +256,6 @@
         "key": "shift+f11",
         "command": "bookmarks.list"
     },
-
     // Additional useful mappings
     {
         "key": "ctrl+shift+a",

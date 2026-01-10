@@ -10,3 +10,5 @@ ms-python.vscode-python-envs
 ms-ossdata.vscode-pgsql
 ms-azuretools.vscode-docker
 vscodevim.vim
+miguelsolorio.symbols
+manitejapratha.cursor-midnight-theme

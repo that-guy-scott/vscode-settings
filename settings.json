@@ -470,15 +470,6 @@
         {
             "before": [
                 "<leader>",
-                "B"
-            ],
-            "commands": [
-                "workbench.view.extension.bookmarks"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
                 "n"
             ],
             "commands": [
@@ -601,10 +592,16 @@
     "continue.enableTabAutocomplete": false,
     "editor.codeActionsOnSave": {},
     // Dark theme settings
-    "workbench.colorCustomizations": {
-        "editor.background": "#000000",
-        "sideBar.background": "#000000",
-        "activityBar.background": "#000000",
-        "terminal.background": "#000000"
-    }
+    // "workbench.colorCustomizations": {
+    // "editor.background": "#000000",
+    // "sideBar.background": "#000000",
+    // "activityBar.background": "#000000",
+    // "terminal.background": "#000000"
+    // },
+    "terminal.integrated.cursorStyle": "line",
+    "http.systemCertificatesNode": true,
+    "geminicodeassist.project": "that-guy-scott",
+    "workbench.iconTheme": "symbols",
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "cursor anysphere theme"
 }
