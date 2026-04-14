@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VS Code Stock Keybindings (Linux)</title>
+<style>
+  @page { size: letter; margin: 0.4in; }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    color: #111;
+    background: #fff;
+    line-height: 1.3;
+  }
+
+  body {
+    padding: 0.35in 0.4in;
+  }
+
+  header {
+    column-span: all;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #111;
+  }
+
+  h1 {
+    font-size: 18pt;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+
+  header .sub {
+    font-size: 9pt;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  header .sub code {
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    background: #eee;
+    padding: 0 3px;
+    border-radius: 2px;
+  }
+
+  main {
+    column-count: 2;
+    column-gap: 18px;
+  }
+
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #222;
+    margin: 0 0 3px 0;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #999;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+  }
+
+  td {
+    padding: 2px 2px;
+    vertical-align: baseline;
+  }
+
+  td.key {
+    text-align: right;
+    white-space: nowrap;
+    width: 1%;
+    padding-right: 8px;
+  }
+
+  td.act {
+    color: #222;
+  }
+
+  td.act .note {
+    color: #888;
+    font-size: 8pt;
+    font-style: italic;
+  }
+
+  td.act .was {
+    color: #b04000;
+    font-size: 8pt;
+    font-style: italic;
+  }
+
+  kbd {
+    display: inline-block;
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 8.5pt;
+    padding: 1px 5px;
+    border: 1px solid #777;
+    border-bottom-width: 2px;
+    border-radius: 3px;
+    background: #f5f5f5;
+    color: #111;
+    min-width: 14px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .plus {
+    color: #888;
+    font-size: 8pt;
+    margin: 0 1px;
+  }
+
+  .then {
+    color: #888;
+    font-size: 8pt;
+    margin: 0 3px;
+  }
+
+  @media print {
+    html, body { font-size: 9.5pt; }
+    kbd { background: #fff; }
+    header { border-bottom-color: #000; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>VS Code Stock Keybindings</h1>
+  <div class="sub">
+    Linux defaults &nbsp;·&nbsp;
+    No custom settings, no Vim, no IntelliJ mappings &nbsp;·&nbsp;
+    <span style="color:#b04000;">Orange notes</span> show what your custom keybindings.json overrides
+  </div>
+</header>
+
+<main>
+
+<section>
+  <h2>Files &amp; Editors</h2>
+  <table>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>P</kbd></td><td class="act">Quick open / go to file <span class="was">your: Ctrl+N, Ctrl+E, Ctrl+Shift+N</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>P</kbd></td><td class="act">Command palette <span class="was">your: Shift Shift, Ctrl+Shift+A</span></td></tr>
+    <tr><td class="key"><kbd>F1</kbd></td><td class="act">Command palette</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>N</kbd></td><td class="act">New untitled file <span class="was">your: quick open</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>S</kbd></td><td class="act">Save</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>W</kbd></td><td class="act">Close active editor <span class="was">your: expand selection</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>T</kbd></td><td class="act">Reopen closed editor</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Tab</kbd></td><td class="act">Switch editors (MRU picker)</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>PageUp</kbd></td><td class="act">Previous editor in group</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>PageDown</kbd></td><td class="act">Next editor in group</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Navigation</h2>
+  <table>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>G</kbd></td><td class="act">Go to line</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>O</kbd></td><td class="act">Go to symbol in file <span class="was">your: Ctrl+F12</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>T</kbd></td><td class="act">Go to symbol in workspace</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>Left</kbd></td><td class="act">Navigate back <span class="was">your: Ctrl+Alt+Left</span></td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>Right</kbd></td><td class="act">Navigate forward <span class="was">your: Ctrl+Alt+Right</span></td></tr>
+    <tr><td class="key"><kbd>F8</kbd></td><td class="act">Go to next problem <span class="was">your: debug continue</span></td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>F8</kbd></td><td class="act">Go to previous problem</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>.</kbd></td><td class="act">Focus breadcrumbs <span class="was">your: Alt+Home</span></td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Code Navigation</h2>
+  <table>
+    <tr><td class="key"><kbd>F12</kbd></td><td class="act">Go to definition <span class="was">your: Ctrl+B</span></td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>F12</kbd></td><td class="act">Peek definition</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>F12</kbd></td><td class="act">Go to implementation <span class="was">your: Ctrl+Alt+B</span></td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>F12</kbd></td><td class="act">Peek references</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>F12</kbd></td><td class="act">Find all references <span class="was">your: Alt+F7</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Space</kbd></td><td class="act">Trigger suggestions <span class="was">your: Ctrl+I</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>K</kbd> <kbd>Ctrl</kbd><span class="plus">+</span><kbd>I</kbd></td><td class="act">Show hover <span class="was">your: Ctrl+Shift+I</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>Space</kbd></td><td class="act">Parameter hints</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Editing</h2>
+  <table>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>K</kbd></td><td class="act">Delete line <span class="was">your: Ctrl+Y</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Enter</kbd></td><td class="act">Insert line below</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>Enter</kbd></td><td class="act">Insert line above</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>Up</kbd></td><td class="act">Move line up <span class="was">your: Ctrl+Shift+Up</span></td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>Down</kbd></td><td class="act">Move line down <span class="was">your: Ctrl+Shift+Down</span></td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>Down</kbd></td><td class="act">Copy line down (duplicate) <span class="was">your: Ctrl+D</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>D</kbd></td><td class="act">Add selection to next match <span class="was">your: duplicate selection</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Z</kbd></td><td class="act">Undo</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>Z</kbd></td><td class="act">Redo</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>/</kbd></td><td class="act">Toggle line comment</td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>A</kbd></td><td class="act">Toggle block comment</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Selection &amp; Multi-Cursor</h2>
+  <table>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>Right</kbd></td><td class="act">Expand selection <span class="was">your: Ctrl+W</span></td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>Left</kbd></td><td class="act">Shrink selection</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>L</kbd></td><td class="act">Select all occurrences</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>Down</kbd></td><td class="act">Add cursor below</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>Up</kbd></td><td class="act">Add cursor above</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>Click</kbd></td><td class="act">Insert cursor</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Refactoring</h2>
+  <table>
+    <tr><td class="key"><kbd>F2</kbd></td><td class="act">Rename symbol <span class="was">your: Shift+F6</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>.</kbd></td><td class="act">Quick fix / code actions <span class="was">your: Ctrl+Alt+Shift+T</span></td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>F</kbd></td><td class="act">Format document <span class="was">your: Ctrl+Alt+L</span></td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>O</kbd></td><td class="act">Organize imports <span class="was">your: Ctrl+Alt+O</span></td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Search</h2>
+  <table>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>F</kbd></td><td class="act">Find in editor</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>H</kbd></td><td class="act">Replace in editor <span class="was">your: replace in files</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>F</kbd></td><td class="act">Find in files</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>H</kbd></td><td class="act">Replace in files <span class="was">your: Ctrl+Shift+R</span></td></tr>
+    <tr><td class="key"><kbd>F3</kbd></td><td class="act">Find next</td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>F3</kbd></td><td class="act">Find previous</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>Enter</kbd></td><td class="act">Select all find matches</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Run / Debug</h2>
+  <table>
+    <tr><td class="key"><kbd>F5</kbd></td><td class="act">Start / Continue debugging <span class="was">your: Shift+F9 / F8</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>F5</kbd></td><td class="act">Run without debugging <span class="was">your: Shift+F10</span></td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>F5</kbd></td><td class="act">Stop debugging <span class="was">your: Ctrl+F2</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>F5</kbd></td><td class="act">Restart debugging</td></tr>
+    <tr><td class="key"><kbd>F9</kbd></td><td class="act">Toggle breakpoint</td></tr>
+    <tr><td class="key"><kbd>F10</kbd></td><td class="act">Step over</td></tr>
+    <tr><td class="key"><kbd>F11</kbd></td><td class="act">Step into <span class="was">your: bookmark toggle</span></td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>F11</kbd></td><td class="act">Step out</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Views &amp; Panels</h2>
+  <table>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>B</kbd></td><td class="act">Toggle primary sidebar <span class="was">your: go to definition</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>J</kbd></td><td class="act">Toggle panel</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>`</kbd></td><td class="act">Toggle terminal <span class="was">your: Alt+F12</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>E</kbd></td><td class="act">Explorer sidebar</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>F</kbd></td><td class="act">Search sidebar</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>G</kbd></td><td class="act">Source control <span class="was">your: Alt+9</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>D</kbd></td><td class="act">Run &amp; debug sidebar <span class="was">your: Alt+5</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>X</kbd></td><td class="act">Extensions sidebar</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>M</kbd></td><td class="act">Problems panel</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>U</kbd></td><td class="act">Output panel</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>Y</kbd></td><td class="act">Debug console</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Git / SCM</h2>
+  <table>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>G</kbd></td><td class="act">Open source control view</td></tr>
+    <tr><td class="key"><span class="note">no default</span></td><td class="act">Commit staged <span class="was">your: Ctrl+K (outside editor)</span></td></tr>
+    <tr><td class="key"><span class="note">no default</span></td><td class="act">Toggle bookmark <span class="was">your: F11</span></td></tr>
+    <tr><td class="key"><span class="note">no default</span></td><td class="act">List bookmarks <span class="was">your: Shift+F11</span></td></tr>
+  </table>
+</section>
+
+</main>
+
+</body>
+</html>

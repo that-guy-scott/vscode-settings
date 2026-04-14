@@ -2,11 +2,10 @@
     "keyboard.dispatch": "keyCode",
     "github.copilot.nextEditSuggestions.enabled": true,
     "workbench.startupEditor": "none",
-    "claudeCode.preferredLocation": "sidebar",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.fontLigatures": true,
     "editor.fontFamily": "'DroidSansM Nerd Font', 'Droid Sans Mono', monospace",
-    "editor.fontSize": 14,
+    "editor.fontSize": 18,
     // Vim Extension Configuration
     "vim.leader": ";",
     "vim.useSystemClipboard": true,
@@ -600,8 +599,11 @@
     // },
     "terminal.integrated.cursorStyle": "line",
     "http.systemCertificatesNode": true,
-    "geminicodeassist.project": "that-guy-scott",
+    "geminicodeassist.project": "zeta-effort-k04ln",
     "workbench.iconTheme": "symbols",
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "cursor anysphere theme"
+    "workbench.colorTheme": "cursor anysphere theme",
+    "diffEditor.renderSideBySide": false,
+    "claudeCode.preferredLocation": "panel",
+    "explorer.confirmPasteNative": false
 }

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>VS Code Shortcuts Cheatsheet</title>
+<style>
+  @page { size: letter; margin: 0.4in; }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 10pt;
+    color: #111;
+    background: #fff;
+    line-height: 1.3;
+  }
+
+  body {
+    padding: 0.35in 0.4in;
+  }
+
+  header {
+    column-span: all;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #111;
+  }
+
+  h1 {
+    font-size: 18pt;
+    margin: 0;
+    letter-spacing: 0.5px;
+  }
+
+  header .sub {
+    font-size: 9pt;
+    color: #555;
+    margin-top: 2px;
+  }
+
+  header .sub code {
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    background: #eee;
+    padding: 0 3px;
+    border-radius: 2px;
+  }
+
+  main {
+    column-count: 2;
+    column-gap: 18px;
+  }
+
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #222;
+    margin: 0 0 3px 0;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #999;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+  }
+
+  td {
+    padding: 2px 2px;
+    vertical-align: baseline;
+  }
+
+  td.key {
+    text-align: right;
+    white-space: nowrap;
+    width: 1%;
+    padding-right: 8px;
+  }
+
+  td.act {
+    color: #222;
+  }
+
+  td.act .note {
+    color: #888;
+    font-size: 8pt;
+    font-style: italic;
+  }
+
+  kbd {
+    display: inline-block;
+    font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 8.5pt;
+    padding: 1px 5px;
+    border: 1px solid #777;
+    border-bottom-width: 2px;
+    border-radius: 3px;
+    background: #f5f5f5;
+    color: #111;
+    min-width: 14px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .plus {
+    color: #888;
+    font-size: 8pt;
+    margin: 0 1px;
+  }
+
+  section.custom h2 {
+    color: #1a5fa8;
+    border-bottom-color: #1a5fa8;
+  }
+
+  section.custom {
+    border-left: 3px solid #1a5fa8;
+    padding-left: 6px;
+  }
+
+  @media print {
+    html, body { font-size: 9.5pt; }
+    kbd { background: #fff; }
+    header { border-bottom-color: #000; }
+    section.custom { border-left-color: #1a5fa8; }
+    section.custom h2 { color: #1a5fa8; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>VS Code Shortcuts</h1>
+  <div class="sub">
+    Vim leader key: <code>;</code> &nbsp;·&nbsp;
+    Leader mappings fire in <em>normal</em> mode unless noted &nbsp;·&nbsp;
+    IntelliJ-style global bindings work in any mode
+  </div>
+</header>
+
+<main>
+
+<section class="custom">
+  <h2>Vim Leader — Sidebar / Views</h2>
+  <table>
+    <tr><td class="key"><kbd>;1</kbd></td><td class="act">File Explorer</td></tr>
+    <tr><td class="key"><kbd>;2</kbd></td><td class="act">Bookmarks view</td></tr>
+    <tr><td class="key"><kbd>;3</kbd></td><td class="act">Todo Tree view</td></tr>
+    <tr><td class="key"><kbd>;7</kbd></td><td class="act">Outline</td></tr>
+    <tr><td class="key"><kbd>;8</kbd></td><td class="act">Toggle Zen Mode</td></tr>
+    <tr><td class="key"><kbd>;9</kbd></td><td class="act">Copilot Chat panel</td></tr>
+    <tr><td class="key"><kbd>;0</kbd></td><td class="act">Copilot view</td></tr>
+  </table>
+</section>
+
+<section class="custom">
+  <h2>Vim Leader — Top Row</h2>
+  <table>
+    <tr><td class="key"><kbd>;q</kbd></td><td class="act">Show hover</td></tr>
+    <tr><td class="key"><kbd>;w</kbd></td><td class="act">Go to symbol in file</td></tr>
+    <tr><td class="key"><kbd>;W</kbd></td><td class="act">Save file</td></tr>
+    <tr><td class="key"><kbd>;e</kbd></td><td class="act">Quick open</td></tr>
+    <tr><td class="key"><kbd>;E</kbd></td><td class="act">Recent editors (MRU)</td></tr>
+    <tr><td class="key"><kbd>;r</kbd></td><td class="act">Run (debug)</td></tr>
+    <tr><td class="key"><kbd>;R</kbd></td><td class="act">Recent editors (MRU)</td></tr>
+    <tr><td class="key"><kbd>;t</kbd></td><td class="act">Toggle terminal</td></tr>
+    <tr><td class="key"><kbd>;u</kbd></td><td class="act">Half page up</td></tr>
+    <tr><td class="key"><kbd>;i</kbd></td><td class="act">Toggle bookmark</td></tr>
+    <tr><td class="key"><kbd>;o</kbd></td><td class="act">Open file</td></tr>
+    <tr><td class="key"><kbd>;p</kbd></td><td class="act">Navigate back</td></tr>
+    <tr><td class="key"><kbd>;P</kbd></td><td class="act">Toggle Zen Mode</td></tr>
+  </table>
+</section>
+
+<section class="custom">
+  <h2>Vim Leader — Middle Row</h2>
+  <table>
+    <tr><td class="key"><kbd>;Esc</kbd></td><td class="act">Close panel &amp; sidebar</td></tr>
+    <tr><td class="key"><kbd>;a</kbd></td><td class="act">Command palette</td></tr>
+    <tr><td class="key"><kbd>;A</kbd></td><td class="act">Select all</td></tr>
+    <tr><td class="key"><kbd>;s</kbd></td><td class="act">Quick open</td></tr>
+    <tr><td class="key"><kbd>;sr</kbd></td><td class="act">Open recent</td></tr>
+    <tr><td class="key"><kbd>;sf</kbd></td><td class="act">Quick open</td></tr>
+    <tr><td class="key"><kbd>;d</kbd></td><td class="act">Half page down</td></tr>
+    <tr><td class="key"><kbd>;dd</kbd></td><td class="act">New untitled file</td></tr>
+    <tr><td class="key"><kbd>;f</kbd></td><td class="act">Find in files</td></tr>
+    <tr><td class="key"><kbd>;ff</kbd></td><td class="act">Quick open</td></tr>
+    <tr><td class="key"><kbd>;F</kbd></td><td class="act">Go to symbol</td></tr>
+    <tr><td class="key"><kbd>;g</kbd></td><td class="act">Go to symbol</td></tr>
+    <tr><td class="key"><kbd>;h</kbd></td><td class="act">Toggle line comment</td></tr>
+    <tr><td class="key"><kbd>;H</kbd></td><td class="act">Split editor down</td></tr>
+    <tr><td class="key"><kbd>;j</kbd></td><td class="act">Next bookmark</td></tr>
+    <tr><td class="key"><kbd>;k</kbd></td><td class="act">Previous bookmark</td></tr>
+    <tr><td class="key"><kbd>;l</kbd></td><td class="act">Last edit location</td></tr>
+    <tr><td class="key"><kbd>;;</kbd></td><td class="act">Last edit location</td></tr>
+  </table>
+</section>
+
+<section class="custom">
+  <h2>Vim Leader — Bottom Row</h2>
+  <table>
+    <tr><td class="key"><kbd>;x</kbd></td><td class="act">Close all editors</td></tr>
+    <tr><td class="key"><kbd>;c</kbd></td><td class="act">Copilot Chat panel</td></tr>
+    <tr><td class="key"><kbd>;v</kbd></td><td class="act">Select inner WORD</td></tr>
+    <tr><td class="key"><kbd>;V</kbd></td><td class="act">Split editor right</td></tr>
+    <tr><td class="key"><kbd>;b</kbd></td><td class="act">Jump to matching bracket</td></tr>
+    <tr><td class="key"><kbd>;B</kbd></td><td class="act">Bookmarks view</td></tr>
+    <tr><td class="key"><kbd>;n</kbd></td><td class="act">Next editor</td></tr>
+    <tr><td class="key"><kbd>;m</kbd></td><td class="act">Go to symbol in file</td></tr>
+    <tr><td class="key"><kbd>;M</kbd></td><td class="act">Go to symbol in workspace</td></tr>
+    <tr><td class="key"><kbd>;.</kbd></td><td class="act">Toggle breakpoint</td></tr>
+    <tr><td class="key"><kbd>;/</kbd></td><td class="act">Clear search highlight</td></tr>
+  </table>
+</section>
+
+<section class="custom">
+  <h2>Vim Goto (g…)</h2>
+  <table>
+    <tr><td class="key"><kbd>ge</kbd></td><td class="act">Command palette</td></tr>
+    <tr><td class="key"><kbd>gu</kbd></td><td class="act">Find references</td></tr>
+    <tr><td class="key"><kbd>gi</kbd></td><td class="act">Go to implementation</td></tr>
+    <tr><td class="key"><kbd>gh</kbd></td><td class="act">Open local history</td></tr>
+  </table>
+</section>
+
+<section class="custom">
+  <h2>Vim Navigation</h2>
+  <table>
+    <tr><td class="key"><kbd>]]</kbd></td><td class="act">Next problem</td></tr>
+    <tr><td class="key"><kbd>[[</kbd></td><td class="act">Previous problem</td></tr>
+    <tr><td class="key"><kbd>Y</kbd></td><td class="act">Yank to end of line</td></tr>
+    <tr><td class="key"><kbd>U</kbd></td><td class="act">Redo</td></tr>
+  </table>
+</section>
+
+<section class="custom">
+  <h2>Vim Visual Mode</h2>
+  <table>
+    <tr><td class="key"><kbd>;h</kbd></td><td class="act">Toggle line comment</td></tr>
+    <tr><td class="key"><kbd>;f</kbd></td><td class="act">Find in files</td></tr>
+    <tr><td class="key"><kbd>;i</kbd></td><td class="act">Inline chat (Copilot)</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Global — Navigation</h2>
+  <table>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>N</kbd></td><td class="act">Quick open</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>N</kbd></td><td class="act">Quick open</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>E</kbd></td><td class="act">Quick open</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>E</kbd></td><td class="act">Recent editors (MRU)</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>←</kbd></td><td class="act">Navigate back</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>→</kbd></td><td class="act">Navigate forward</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Tab</kbd></td><td class="act">Previous editor in group</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>Tab</kbd></td><td class="act">Least recent editor</td></tr>
+    <tr><td class="key"><kbd>Shift</kbd> <kbd>Shift</kbd></td><td class="act">Command palette</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>Home</kbd></td><td class="act">Focus breadcrumbs</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Global — Code Navigation</h2>
+  <table>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>B</kbd></td><td class="act">Go to definition</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>B</kbd></td><td class="act">Go to implementation</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>F7</kbd></td><td class="act">Find references</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>F12</kbd></td><td class="act">Go to symbol</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>I</kbd></td><td class="act">Show hover</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>I</kbd></td><td class="act">Trigger suggest <span class="note">(insert)</span></td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Global — Refactoring</h2>
+  <table>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>F6</kbd></td><td class="act">Rename symbol</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>T</kbd></td><td class="act">Refactor…</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>V</kbd></td><td class="act">Refactor (extract variable)</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>M</kbd></td><td class="act">Refactor (extract method)</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>Insert</kbd></td><td class="act">Source action / generate</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Global — Editing</h2>
+  <table>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>D</kbd></td><td class="act">Duplicate selection <span class="note">(insert)</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Y</kbd></td><td class="act">Delete line <span class="note">(normal)</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>↑</kbd></td><td class="act">Move line up</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>↓</kbd></td><td class="act">Move line down</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>W</kbd></td><td class="act">Expand selection</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>W</kbd></td><td class="act">Close active editor</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>L</kbd></td><td class="act">Format document</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Alt</kbd><span class="plus">+</span><kbd>O</kbd></td><td class="act">Organize imports</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Global — Search</h2>
+  <table>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>F</kbd></td><td class="act">Find in editor <span class="note">(insert)</span></td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>H</kbd></td><td class="act">Replace in files</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>F</kbd></td><td class="act">Find in files</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>R</kbd></td><td class="act">Replace in files</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>A</kbd></td><td class="act">Command palette</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Global — Run / Debug</h2>
+  <table>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>F10</kbd></td><td class="act">Run</td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>F9</kbd></td><td class="act">Start debugging</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>F2</kbd></td><td class="act">Stop</td></tr>
+    <tr><td class="key"><kbd>F8</kbd></td><td class="act">Continue</td></tr>
+    <tr><td class="key"><kbd>F7</kbd></td><td class="act">Step into</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Global — Tool Windows</h2>
+  <table>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>1</kbd></td><td class="act">Toggle sidebar</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>2</kbd></td><td class="act">Bookmarks</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>3</kbd></td><td class="act">Find in files</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>4</kbd></td><td class="act">Run</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>5</kbd></td><td class="act">Debug view</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>7</kbd></td><td class="act">Outline</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>9</kbd></td><td class="act">Source control</td></tr>
+    <tr><td class="key"><kbd>Alt</kbd><span class="plus">+</span><kbd>F12</kbd></td><td class="act">Toggle terminal</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>F12</kbd></td><td class="act">Maximize panel</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>Global — Bookmarks &amp; Git</h2>
+  <table>
+    <tr><td class="key"><kbd>F11</kbd></td><td class="act">Toggle bookmark</td></tr>
+    <tr><td class="key"><kbd>Shift</kbd><span class="plus">+</span><kbd>F11</kbd></td><td class="act">List bookmarks</td></tr>
+    <tr><td class="key"><kbd>Ctrl</kbd><span class="plus">+</span><kbd>K</kbd></td><td class="act">Commit staged <span class="note">(outside editor)</span></td></tr>
+  </table>
+</section>
+
+</main>
+
+</body>
+</html>
