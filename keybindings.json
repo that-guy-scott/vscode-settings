@@ -34,7 +34,12 @@
         "when": "sideBarVisible && activeViewlet == 'workbench.view.explorer'"
     },
     // IntelliJ-style navigation
-    // Ctrl+N reserved for Copilot new chat session
+    // Codex: focus the chat sidebar globally
+    {
+        "key": "ctrl+shift+i",
+        "command": "chatgpt.openSidebar"
+    },
+    // Ctrl+N starts a new chat when Codex is focused
     {
         "key": "ctrl+shift+n",
         "command": "workbench.action.quickOpen"
@@ -135,8 +140,6 @@
         "command": "editor.action.sourceAction",
         "when": "editorTextFocus"
     },
-    // Ctrl+I reserved for Copilot inline chat
-    // Ctrl+Shift+I reserved for Copilot agent mode
     // IntelliJ-style search
     {
         "key": "ctrl+shift+f",

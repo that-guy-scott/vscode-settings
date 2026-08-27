@@ -1,11 +1,10 @@
 {
     "keyboard.dispatch": "keyCode",
-    "github.copilot.nextEditSuggestions.enabled": true,
     "workbench.startupEditor": "none",
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.fontLigatures": true,
     "editor.fontFamily": "'DroidSansM Nerd Font', 'Droid Sans Mono', monospace",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 0.8,
     "editor.fontSize": 16,
     // Vim Extension Configuration
     "vim.leader": ";",
@@ -69,6 +68,33 @@
         {
             "before": [
                 "<leader>",
+                "4"
+            ],
+            "commands": [
+                "workbench.actions.view.problems"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "5"
+            ],
+            "commands": [
+                "workbench.view.scm"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "6"
+            ],
+            "commands": [
+                "workbench.view.testing"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "7"
             ],
             "commands": [
@@ -82,24 +108,6 @@
             ],
             "commands": [
                 "workbench.action.toggleZenMode"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "9"
-            ],
-            "commands": [
-                "workbench.panel.chat.view.copilot.focus"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "0"
-            ],
-            "commands": [
-                "workbench.view.extension.github-copilot"
             ]
         },
         // Top row
@@ -187,6 +195,15 @@
         {
             "before": [
                 "<leader>",
+                "T"
+            ],
+            "commands": [
+                "workbench.action.terminal.focus"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "u"
             ],
             "after": [
@@ -229,11 +246,11 @@
                 "workbench.action.toggleZenMode"
             ]
         },
-        // Method navigation
+        // Diagnostic navigation
         {
             "before": [
                 "]",
-                "]"
+                "d"
             ],
             "commands": [
                 "editor.action.marker.next"
@@ -242,7 +259,7 @@
         {
             "before": [
                 "[",
-                "["
+                "d"
             ],
             "commands": [
                 "editor.action.marker.prev"
@@ -326,6 +343,15 @@
             ],
             "commands": [
                 "workbench.action.files.newUntitledFile"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "D"
+            ],
+            "commands": [
+                "git.openChange"
             ]
         },
         {
@@ -423,6 +449,15 @@
         {
             "before": [
                 "<leader>",
+                "z"
+            ],
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
                 "x"
             ],
             "commands": [
@@ -432,10 +467,51 @@
         {
             "before": [
                 "<leader>",
+                "c",
                 "c"
             ],
             "commands": [
-                "workbench.panel.chat.view.copilot.focus"
+                "chatgpt.openSidebar"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "n"
+            ],
+            "commands": [
+                "chatgpt.newChat"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "a"
+            ],
+            "commands": [
+                "chatgpt.addToThread"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "f"
+            ],
+            "commands": [
+                "chatgpt.addFileToThread"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "p"
+            ],
+            "commands": [
+                "chatgpt.newCodexPanel"
             ]
         },
         {
@@ -648,9 +724,11 @@
     "http.systemCertificatesNode": true,
     "workbench.iconTheme": "symbols",
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "Dark Modern",
     "diffEditor.renderSideBySide": false,
     "claudeCode.preferredLocation": "sidebar",
     "explorer.confirmPasteNative": false,
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.editor.showTabs": "none",
+    "chat.viewSessions.orientation": "stacked"
 }
