@@ -4,7 +4,7 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.fontLigatures": true,
     "editor.fontFamily": "'DroidSansM Nerd Font', 'Droid Sans Mono', monospace",
-    "window.zoomLevel": 0.8,
+    "window.zoomLevel": 2,
     "editor.fontSize": 16,
     // Vim Extension Configuration
     "vim.leader": ";",
