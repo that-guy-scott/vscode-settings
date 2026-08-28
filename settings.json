@@ -4,8 +4,10 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "editor.fontLigatures": true,
     "editor.fontFamily": "'DroidSansM Nerd Font', 'Droid Sans Mono', monospace",
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
     "editor.fontSize": 16,
+    "chat.fontSize": 16,
+    "chat.editor.fontSize": 16,
     // Vim Extension Configuration
     "vim.leader": ";",
     "vim.useSystemClipboard": true,
@@ -730,5 +732,6 @@
     "explorer.confirmPasteNative": false,
     "security.workspace.trust.untrustedFiles": "open",
     "workbench.editor.showTabs": "none",
-    "chat.viewSessions.orientation": "stacked"
+    "chat.viewSessions.orientation": "stacked",
+    "terminal.integrated.initialHint": false
 }
